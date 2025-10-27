@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../img _hack"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "AllAboutJava"
+	}
+}
