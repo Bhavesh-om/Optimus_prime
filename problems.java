@@ -7,7 +7,7 @@ public class problems {
 
     public static int trappedRainwater(int height[]) {
         // calculate left max boundary-array
-        int  n = height.length;
+        int n = height.length;
         int leftMax[] = new int[n];
         leftMax[0] = height[0];
         for (int i = 1; i < n; i++) {
@@ -17,27 +17,51 @@ public class problems {
         // calculate right min boundary-array
         int RightMax[] = new int[n];
         RightMax[n - 1] = height[n - 1];
-        for (int i =n - 2; i >= 0; i--) {
+        for (int i = n - 2; i >= 0; i--) {
             RightMax[i] = Math.max(height[i], RightMax[i + 1]);
         }
 
-        int trappedRainwater=0;
+        int trappedRainwater = 0;
         // loop
-        for(int i=0; i< n; i++){
-             // waterLVL = min(leftMaxBound , RightMaxBound)
-             int waterLVL= Math.min(leftMax[i],RightMax[i]);
-             // trapped water = waterLVL- height[i]
+        for (int i = 0; i < n; i++) {
+            // waterLVL = min(leftMaxBound , RightMaxBound)
+            int waterLVL = Math.min(leftMax[i], RightMax[i]);
+            // trapped water = waterLVL- height[i]
             trappedRainwater += waterLVL - height[i];
         }
-       
+
         return trappedRainwater;
     }
 
+    // Buy & Sell Stocks problem
+    // prefer stock.png
+    public static int BuySellStock(int prices[]) {
+        int maxProfit = 0;
+        int buyPrice = Integer.MAX_VALUE;
 
+        for (int i = 0; i < prices.length; i++) {
+            if (buyPrice < prices[i]) {
+                // profit
+                int profit = prices[i] - buyPrice;
+                // compare
+                maxProfit = Math.max(profit, maxProfit);
+            } else {
+                buyPrice = prices[i];
+            }
+        }
 
+        if (maxProfit > 0) {
+            return maxProfit;
+        }
+        return 0;
+    }
 
+    // Execution in main:
     public static void main(String[] args) {
-        int height[]= {4,2,0,6,3,2,5};
+        int height[] = { 4, 2, 0, 6, 3, 2, 5 };
         System.out.println(trappedRainwater(height));
+
+        int prices[] = { 7, 1, 5, 3, 6, 4 };
+        System.out.println(BuySellStock(prices));
     }
 }
