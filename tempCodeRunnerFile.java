@@ -1,1 +1,1 @@
-original
+ return -1;
