@@ -7,7 +7,7 @@ public class sorting {
         }
         System.out.println();
      }
-    //bubble sort
+    //bubble sort - comparing greater from start and pushing in on great position
     //O(n^2)
    public static void bubbleSort(int arr[]){
     int n= arr.length;
@@ -24,9 +24,29 @@ public class sorting {
 
    } 
 
+   //selection sort- selecting smaller from whole arr and pushing it front
+   //O(n^2) but lil.bit better than bubble sort
+    public static void selectionSort(int arr[]){
+    int n= arr.length;
+    for(int track=0;track<n-1;track++){
+        int minvalue=track;
+        for(int j=track+1; j<n; j++){
+            //as before element get sorted it sorts after element/unsorted part
+            if(arr[minvalue]>arr[j]){
+                minvalue=j;
+            }
+        }
+        //now we swap
+        int temp = arr[minvalue];
+        arr[minvalue]=arr[track];
+        arr[track]= temp;
+
+    }
+   }
+
    public static void main(String[] args) {
     int arr[]=  {1,9,5,6,2,7};
-    bubbleSort(arr);
+    selectionSort(arr);
     printArr(arr);
    }
 }
