@@ -1,6 +1,4 @@
 
-import java.util.*;
-
 public class problems {
     // traping rainwater
     // hight of bars = [4 2 0 6 3 2 5]
@@ -80,21 +78,28 @@ public class problems {
                 return mid;
             }
             else if(search[start]<=search[mid]){
-                if(search[start]<=target && search[mid]>=target){
-                    end= mid;
-                    
+                if(search[start]<=target && target<search[mid]){
+                    end= mid-1;
                 }
                 else{ start= mid+1;}
-
-               /*  if(target>=search[mid] && target<= search[end]){
+            } else {
+                if(target>search[mid] && target<= search[end]){
                     start=mid+1;
                 }
-                else{ end= mid;} 
-            } */
-
+                else{ end= mid-1;} 
+            }
         }
         return -1;
     }
+
+    //is string palindrome:
+    public static boolean ispalindrome(String s){
+        for(int i=0;i<s.length()/2; i++){
+            if(s.charAt(i) != s.charAt(s.length()-1-i)) return false;
+        }
+        return true;
+    }
+
     // Execution in main:
     public static void main(String[] args) {
         int height[] = { 4, 2, 0, 6, 3, 2, 5 };
@@ -107,5 +112,7 @@ public class problems {
         int target =0;
         System.out.println(search(search, target));
 
+        String s= "racecar";
+        System.out.println(ispalindrome(s));
     }
 }
