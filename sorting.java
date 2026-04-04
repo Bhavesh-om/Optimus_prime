@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class sorting {
+class sorting {
     // sorting meaning arranging in particular order
     public static void printArr(Integer arr[]) {
         for (int i = 0; i < arr.length; i++) {
