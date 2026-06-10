@@ -1,5 +1,5 @@
 
-public class problems {
+public class Problems {
     // traping rainwater
     // hight of bars = [4 2 0 6 3 2 5]
     // prefer Traping_rainwater.png

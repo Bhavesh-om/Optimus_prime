@@ -1,0 +1,73 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "cycle_sort",
+      "request": "launch",
+      "mainClass": "cycle_sort",
+      "projectName": "AllAboutJava_89f935cd"
+    },
+    {
+      "type": "java",
+      "name": "sorting",
+      "request": "launch",
+      "mainClass": "sorting",
+      "projectName": "AllAboutJava_89f935cd"
+    },
+    {
+      "type": "java",
+      "name": "interfaces",
+      "request": "launch",
+      "mainClass": "interfaces",
+      "projectName": "AllAboutJava_89f935cd"
+    },
+    {
+      "type": "java",
+      "name": "PatternPrinter",
+      "request": "launch",
+      "mainClass": "PatternPrinter",
+      "projectName": "AllAboutJava_89f935cd"
+    },
+    {
+      "type": "java",
+      "name": "piyu",
+      "request": "launch",
+      "mainClass": "piyu",
+      "projectName": "AllAboutJava_89f935cd"
+    },
+    {
+      "type": "java",
+      "name": "cyc",
+      "request": "launch",
+      "mainClass": "cyc",
+      "projectName": "AllAboutJava_89f935cd"
+    },
+    {
+      "type": "java",
+      "name": "cycke_sort",
+      "request": "launch",
+      "mainClass": "cycle.cycke_sort",
+      "projectName": "AllAboutJava_89f935cd"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/2024b/Desktop/AllAboutJava",
+      "program": "c:/Users/2024b/Desktop/AllAboutJava/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}

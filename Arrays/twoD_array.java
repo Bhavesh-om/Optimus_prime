@@ -1,4 +1,3 @@
-
 public class twoD_array {
 
     //max of matrix.

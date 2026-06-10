@@ -21,14 +21,17 @@ class sorting {
     public static void bubbleSort(Integer arr[]) {
         int n = arr.length;
         for (int track = 0; track < n - 1; track++) {
+            boolean swaped= false;
             for (int j = 0; j < n - 1 - track; j++) {
                 if (arr[j] > arr[j + 1]) {
                     // swap
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
+                    swaped=true;
                 }
             }
+            if(!swaped)break;
         }
 
     }

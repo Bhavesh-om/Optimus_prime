@@ -1,5 +1,3 @@
-import java.util.*;
-//here we are knowing the subarray and basic operations on it
 //Brute force causes: time complexity O(n^3)
 //its to harsh too impliment
 //so we move towards the prefix method 
